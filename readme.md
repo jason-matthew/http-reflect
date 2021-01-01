@@ -12,8 +12,10 @@ Functionality particularly helpful within large networks.  Service provides simp
 
 ### Setup
 
+Container 
+
 ```bash
-image=httpd-reflect:latest
+image=http-reflect
 container=reflect
 exposed_port=80
 
@@ -22,15 +24,20 @@ docker build --rm -t "${image}" -f ./Dockerfile .
 
 # start in background
 docker run -d --rm --name ${container} -p ${exposed_port}:80 ${image}
+```
 
-# bring logs to foreground
-docker logs -f ${container}
+Host
+
+```bash
+exposed_port=80
+
+python2 assets/reflect.py --port ${exposed_port}
 ```
 
 ### Query
 
 ```bash
-# across the network within a docker container
+# across the network, within a docker container
 $ hostname -f
 f18bd7bbc08b
 

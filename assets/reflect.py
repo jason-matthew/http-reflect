@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 """
+Simple HTTP server 
+
+Reflect web request details to the HTTP response body
+Produce application/json document which conveys request attributes
+
+Provide support for WhatsMyIP queries
+Produce text/plain response if "ip" or "host" query parameter provided
+
 Adapted based on
 https://gist.github.com/huyng/814831
-
-Initially written by Nathan Hamiel (2010)
 """
 
 # core python modules

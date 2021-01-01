@@ -1,8 +1,8 @@
 # Overview
 
-Provide HTTPD image which reflects request details as the response body.
+Provide HTTP server which reflects request details as the response body.
 
-Image initially established to provide whats-my-ip functionality, expose HTTP client behaviors, and observe proxy modifications.
+Project initially established to provide whats-my-ip functionality, expose HTTP client behaviors, and observe proxy modifications.
 
 ## Usage
 
